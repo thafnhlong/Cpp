@@ -14,3 +14,13 @@ int *pa = &a          //fail
 
 int *const pa = &a    //work
 pa = ...              //fail
+
+
+[void test(int *a);]
+const int a; 
+test(&a);             //fail
+
+
+[void test(const int *a);]
+int a;
+test(&a);             //work
