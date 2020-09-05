@@ -1,26 +1,9 @@
-const int a;
-int b;
+INT 
+CONST INT
 
-const int *pa = int const *pa
+CONST INT *   : pointer to const int
+INT* CONST    : const pointer to int
 
-const int *pb = &b    //work
-*pb = 1               //fail
-pb = &a               //work
+CONST INT * CONST : const pointer to const int
 
-
-
-const int *pa = &a    //work
-int *pa = &a          //fail
-
-int *const pa = &a    //work
-pa = ...              //fail
-
-
-[void test(int *a);]
-const int a; 
-test(&a);             //fail
-
-
-[void test(const int *a);]
-int a;
-test(&a);             //work
+pointer to const int : can point to int  (no vice versa)  
